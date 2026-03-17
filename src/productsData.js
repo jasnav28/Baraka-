@@ -18,7 +18,7 @@ export const PRODUCTS = [
   {
     brand: 'RICERICH',
     displayName: 'RICERICH',
-    specification: '2- Bromo- (l H)- Indole- 3 Carboxaldehyde  1ppm (Liquid)',
+    specification: 'Potassium Humate 49% (Powder)',
     category: 'Humic Acid and Fulvic Acid and their Derivatives',
     crops: ['paddy'],
     dosage: ['One soil application at 1 kg/ha.'],
