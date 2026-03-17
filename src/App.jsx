@@ -8,24 +8,18 @@ export default function App() {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const DEFAULT_ALIAS = 'ZIGMAR';
-    const DEFAULT_ALIASES = new Set(['ZIGMAR', 'zigmar']);
+    const DEFAULT_BRAND = 'SINCHIL';
     const current = window.location.pathname || '/';
     const rawPath = current.replace(/^\//, '');
-    const effectivePath = rawPath || DEFAULT_ALIAS;
+    const effectivePath = rawPath || DEFAULT_BRAND;
     const found = findProductBySlug(effectivePath);
+    const desiredPath = `/${encodeURIComponent(found.brand)}`;
+
+    if (current !== desiredPath) {
+      window.history.replaceState(null, '', desiredPath);
+    }
+
     setProduct(found);
-    let desiredSlug = current;
-    if (!rawPath) {
-      desiredSlug = `/${DEFAULT_ALIAS}`;
-    } else if (DEFAULT_ALIASES.has(rawPath)) {
-      desiredSlug = `/${DEFAULT_ALIAS}`;
-    } else {
-      desiredSlug = `/${encodeURIComponent(found.brand)}`;
-    }
-    if (current !== desiredSlug) {
-      window.history.replaceState(null, '', desiredSlug);
-    }
     document.title = `${found.brand} — Product Information`;
   }, []);
 
@@ -192,29 +186,13 @@ export default function App() {
                 <span className="text-lg">🏭</span>
               </div>
               <div className="flex-1">
-                <div className="text-[#d9c98f] text-sm">Manufactured By:</div>
-                <div className="text-white/90 text-sm sm:text-base font-semibold">Victor Bio Genetics Private Limited</div>
-                <div className="text-white/90 text-sm sm:text-base">Plot No.3/A,Survey No.35,</div>
-                <div className="text-white/90 text-sm sm:text-base">IDA Cherlapally,Kapra Mandal,</div>
-                <div className="text-white/90 text-sm sm:text-base">Medchal-Malkajgiri District,</div>
-                <div className="text-white/90 text-sm sm:text-base">Hyderabad,Telangana-500051</div>
-                <div className="text-white/90 text-sm sm:text-base">Phone: 9603722045</div>
-                <div className="text-white/90 text-sm sm:text-base">E-mail: victorbiogenetics@gmail.com</div>
-              </div>
-            </div>
-          </StarBorder>
-          <StarBorder as="div" className="w-full" color="cyan" speed="5s" thickness={2}>
-            <div className="flex items-start">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#e8d8a6]/25 text-[#e8d8a6] mr-3 shadow-inner">
-                <span className="text-lg">🛒</span>
-              </div>
-              <div className="flex-1">
-                <div className="text-[#d9c98f] text-sm">Marketed By:</div>
-                <div className="text-white/90 text-sm sm:text-base font-semibold">Victor Bio Genetics Private Limited</div>
-                <div className="text-white/90 text-sm sm:text-base">Plot No.4/318,Andola Circle,Kellur,</div>
-                <div className="text-white/90 text-sm sm:text-base">Kalaburagi-585303, Karnataka</div>
-                <div className="text-white/90 text-sm sm:text-base">Phone: 9603722045</div>
-                <div className="text-white/90 text-sm sm:text-base">E-mail: victorbiogenetics@gmail.com</div>
+                <div className="text-[#d9c98f] text-sm">Manufactured And Marketed</div>
+                <div className="text-white/90 text-sm sm:text-base font-semibold">Baraka Crop Science</div>
+                <div className="text-white/90 text-sm sm:text-base">No. 2-212/1,Thamjoor Barwa,</div>
+                <div className="text-white/90 text-sm sm:text-base">Konaje,Ullal,Dakshina Kannada,</div>
+                <div className="text-white/90 text-sm sm:text-base">Karnataka-574199</div>
+                <div className="text-white/90 text-sm sm:text-base">Phone:9448045554</div>
+                <div className="text-white/90 text-sm sm:text-base">E-mail : barakacropscience@gmail.com</div>
               </div>
             </div>
           </StarBorder>
@@ -225,7 +203,7 @@ export default function App() {
               </div>
               <div className="flex-1">
                 <div className="text-[#d9c98f] text-sm">Customer Care</div>
-                <div className="text-white/90 text-sm sm:text-base">9603722045</div>
+                <div className="text-white/90 text-sm sm:text-base">9448045554</div>
               </div>
             </div>
           </StarBorder>

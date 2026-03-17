@@ -8,12 +8,18 @@ import QRCode from 'qrcode';
 const BASE_URL = 'https://victory-nine.vercel.app';
 
 const PRODUCTS = [
-  'ZIGMAR',
-  'PLANTEK',
-  'PRIMEX GRANULES',
-  'HUMIC-Z',
-  'BT-LEAD',
-  'YUVA GRANULES',
+  'SINCHIL',
+  'RICERICH',
+  'GROUNDNUT SPECIAL',
+  'TOMAGROW',
+  'BRINJAL SPECIAL',
+  'COTTOVITA',
+  'PODMAX',
+  'CHILLIGAURD',
+  'LIPOGROW',
+  'CROPMET',
+  'BULB MAX',
+  'SOLANOGROW',
 ];
 
 function toPageUrl(productName) {
