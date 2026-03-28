@@ -10,9 +10,11 @@ export const PRODUCTS = [
     dosage: ['Three foliar application at 0.5 g/l.'],
     gazette: '12th September, 2024\nS.O. 3922(E)',
     composition: [
-      '(i) Humic Acid per cent. by weight minimum 5',
-      '(ii) pH (1 % aq solution) 4.0 – 5.0',
-      '(iii) Specific Gravity 1.0'
+      '(i) Humic acid (Source: Leonardite) per cent. by weight, minimum Content 5.0',
+      '(ii) Potassium as K2O per cent. by weight, minimum 5.5',
+      '(iii) Ammonium lauryl sulfate (anionic surfactant) per cent. by weight, minimum 9.5',
+      '(iv) Sorbitols/carboxylates/sulphates per cent. by weight, maximum 80',
+      '(v) Total (per cent.) 100'
     ]
   },
   {
@@ -20,12 +22,18 @@ export const PRODUCTS = [
     displayName: 'RICERICH',
     specification: 'Potassium Humate 49% (Powder)',
     category: 'Humic Acid and Fulvic Acid and their Derivatives',
-    crops: ['paddy'],
-    dosage: ['One soil application at 1 kg/ha.'],
+    crops: ['Paddy', 'Tomato'],
+    dosage: [
+      'Paddy:One Soil application at 1 kg/ha.',
+      'Tomato:One Soil application at 1 kg/ha.'
+    ],
     gazette: '12th September, 2024\nS.O. 3922(E)',
     composition: [
-      '(i) Humic Acid per cent. by weight minimum 21',
-      '(ii) pH (1 % aqueous solution) 6.0-8.0'
+      '(i) Potassium humate (Source: Leonardite) per cent. by weight, minimum 49',
+      '(ii) Silwet power (adjuvant) per cent. by weight, maximum 0.5',
+      '(iii) Carboxymethyl cellulose per cent. by weight, maximum 1.0',
+      '(iv) Maltodextrin powder per cent. by weight QS',
+      '(v) Total (per cent.) 100'
     ]
   },
   {
@@ -107,9 +115,12 @@ export const PRODUCTS = [
     displayName: 'CHILLIGAURD',
     specification: 'Bacterial biomass hydrolysate (Amino acids 2%)(Liquid)',
     category: 'Protein Hydrolysates and Amino Acids',
-    crops: ['Grape', 'Chilli'],
+    crops: ['Grape', 'Chilli', 'Soyabean', 'Cotton'],
     dosage: [
-      'Four foliar sprays at 1.25 l/ha to 2.0 l/ha depending on canopy size for grapes and Three foliar applications at 3.75 l/ha for Chilli'
+      'Grape : Four foliar sprays at 1.25 l/ha to 2.0 l/ha depending on canopy size',
+      'Chilli : Three foliar applications at 3.75 l/ha',
+      'Soyabean : Three foliar applications at 2.5 l/ha',
+      'Cotton : Three foliar applications at 2.5 l/ha'
     ],
     gazette: '26th May, 2025\nS.O. 2346E)',
     composition: [
