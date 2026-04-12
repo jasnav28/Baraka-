@@ -8,7 +8,7 @@ export default function App() {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    const DEFAULT_BRAND = 'SINCHIL';
+    const DEFAULT_BRAND = 'LEONAR PRIME';
     const current = window.location.pathname || '/';
     const rawPath = current.replace(/^\//, '');
     const effectivePath = rawPath || DEFAULT_BRAND;
@@ -186,16 +186,28 @@ export default function App() {
                 <span className="text-lg">🏭</span>
               </div>
               <div className="flex-1">
-                <div className="text-[#d9c98f] text-sm">Manufactured And Marketed</div>
-                <div className="text-white/90 text-sm sm:text-base font-semibold">Baraka Crop Science</div>
-                <div className="text-white/90 text-sm sm:text-base">No. 2-212/1,Thamjoor Barwa,</div>
-                <div className="text-white/90 text-sm sm:text-base">Konaje,Ullal,Dakshina Kannada,</div>
-                <div className="text-white/90 text-sm sm:text-base">Karnataka-574199</div>
-                <div className="text-white/90 text-sm sm:text-base">Phone:9448045554</div>
-                <div className="text-white/90 text-sm sm:text-base">E-mail : barakacropscience@gmail.com</div>
+                <div className="text-[#d9c98f] text-sm">Manufactured By:</div>
+                <div className="text-white/90 text-sm sm:text-base font-semibold">Agri Search India Pvt. Ltd.</div>
+                <div className="text-white/90 text-sm sm:text-base">No.1473, 17th Main Road, Muneshawara Block,</div>
+                <div className="text-white/90 text-sm sm:text-base">3rd Stage, Banashankari, Bangalore-560026, Karnataka</div>
               </div>
             </div>
           </StarBorder>
+
+          <StarBorder as="div" className="w-full" color="cyan" speed="5s" thickness={2}>
+            <div className="flex items-start">
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#e8d8a6]/25 text-[#e8d8a6] mr-3 shadow-inner">
+                <span className="text-lg">🏢</span>
+              </div>
+              <div className="flex-1">
+                <div className="text-[#d9c98f] text-sm">Marketed By:</div>
+                <div className="text-white/90 text-sm sm:text-base font-semibold">SIBT Chemicals India Pvt. Ltd.</div>
+                <div className="text-white/90 text-sm sm:text-base">No.545/7, Terdal-Halingali Road, Terdal,</div>
+                <div className="text-white/90 text-sm sm:text-base">Jamakhandi Taluk, Bagalkot District, Karnataka-587315</div>
+              </div>
+            </div>
+          </StarBorder>
+
           <StarBorder as="div" className="w-full" color="cyan" speed="5s" thickness={2}>
             <div className="flex items-start">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#e8d8a6]/25 text-[#e8d8a6] mr-3 shadow-inner">
@@ -203,7 +215,7 @@ export default function App() {
               </div>
               <div className="flex-1">
                 <div className="text-[#d9c98f] text-sm">Customer Care</div>
-                <div className="text-white/90 text-sm sm:text-base">9448045554</div>
+                <div className="text-white/90 text-sm sm:text-base">9900030676</div>
               </div>
             </div>
           </StarBorder>
