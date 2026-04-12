@@ -31,7 +31,7 @@ export const PRODUCTS = [
   {
     brand: 'GROUNDNUT SPECIAL',
     displayName: 'GROUNDNUT SPECIAL',
-    specification: 'Humates and Fulvates- 22% (Liquid)',
+    specification: '2- Bromo- (l H)- Indole- 3 Carboxaldehyde  1ppm (Liquid)',
     category: 'Humic Acid and Fulvic Acid and their Derivatives',
     crops: ['Ground nut'],
     dosage: ['Two soil applications at 1.25 l/ha.'],

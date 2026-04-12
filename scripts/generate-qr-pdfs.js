@@ -4,23 +4,23 @@ import path from 'node:path';
 import process from 'node:process';
 import PDFDocument from 'pdfkit';
 import QRCode from 'qrcode';
-import { PRODUCTS as PRODUCT_DEFINITIONS } from '../src/productsData.js';
 
-const BASE_URL = process.env.BASE_URL || 'https://baraka-fawn.vercel.app';
+const BASE_URL = 'https://victory-nine.vercel.app';
 
-const PRODUCTS = PRODUCT_DEFINITIONS.map(p => p.brand);
-
-function toSafeFilename(name) {
-  const withoutControls = Array.from(name)
-    .filter(char => char.charCodeAt(0) >= 32)
-    .join('');
-
-  return withoutControls
-    .replace(/[<>:"/\\|?*]/g, '-')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .replace(/\.+$/, '');
-}
+const PRODUCTS = [
+  'SINCHIL',
+  'RICERICH',
+  'GROUNDNUT SPECIAL',
+  'TOMAGROW',
+  'BRINJAL SPECIAL',
+  'COTTOVITA',
+  'PODMAX',
+  'CHILLIGAURD',
+  'LIPOGROW',
+  'CROPMET',
+  'BULB MAX',
+  'SOLANOGROW',
+];
 
 function toPageUrl(productName) {
   return `${BASE_URL}/${encodeURIComponent(productName)}`;
@@ -62,12 +62,12 @@ async function createPdf({ outputPath, productName, url }) {
 }
 
 async function main() {
-  const outputDir = path.resolve(process.cwd(), process.env.OUTPUT_DIR || 'pdf');
+  const outputDir = path.resolve(process.cwd(), 'qr_pdfs');
   const results = [];
 
   for (const productName of PRODUCTS) {
     const url = toPageUrl(productName);
-    const outputPath = path.join(outputDir, `${toSafeFilename(productName)}.pdf`);
+    const outputPath = path.join(outputDir, `${productName}.pdf`);
     await createPdf({ outputPath, productName, url });
     results.push({ productName, url, outputPath });
   }
